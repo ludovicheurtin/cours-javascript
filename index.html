@@ -28,6 +28,10 @@
         <p>Je suis un texte sous la div</p>
 
         <script>
+            node = document.getElementById('popin');
+            node.style.visibility = "hidden";
+            node.style.height = "0";
+
             function toggle(anId)
             {
                 node = document.getElementById(anId);
