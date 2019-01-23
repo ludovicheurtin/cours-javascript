@@ -7,8 +7,14 @@
     <title>Document</title>
 </head>
 <body>
-    <button>Bouton</button>
+    <button id="btn">Bouton</button>
     <script>
+
+    	document.getElementById("btn").addEventListener("click", maFunction);
+
+			function maFunction() {
+				console.log("Réussite !");
+			}
 
     </script>
 </body>
