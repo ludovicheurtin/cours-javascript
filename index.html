@@ -8,7 +8,21 @@
         <title>Document</title>
 
         <style>
+
+            .anticlick {
+                z-index: 998;
+                position: absolute;
+                width:100%;
+                height: 100%;
+                top: 0;
+                left: 0;
+                background-color: black;
+                opacity: 0.3;
+                visibility: hidden;
+            }
+
             .popin {
+                z-index: 999;
                 position: absolute;
                 width:30%;
                 height: 18vw;
@@ -21,6 +35,7 @@
                 text-align: center;
                 border-radius: 10px;
                 box-shadow: 1.5px 1.5px 5px black;
+                visibility: hidden;
             }
 
             .PopInContent {
@@ -43,6 +58,7 @@
 
         <button id="btn" class="button">Bouton</button>
         
+        <div id="anticlick" class="anticlick"></div>
         <div id="popin" class="popin">
             <p class="PopInContent" >Contenu de la Pop In </p>
             <button id="retour" class="button"> Retour </button>
@@ -51,9 +67,6 @@
             document.getElementById('btn').addEventListener("click", toggle);
             
             document.getElementById('retour').addEventListener("click", toggle);
-           
-            node = document.getElementById('popin');
-            node.style.visibility = "hidden";
  
             function toggle(popin) {
                 node = document.getElementById("popin");
@@ -62,8 +75,13 @@
                 } else {
                     node.style.visibility = "hidden";
                 }
+                node = document.getElementById("anticlick");
+                if (node.style.visibility=="hidden") {
+                    node.style.visibility = "visible";
+                } else {
+                    node.style.visibility = "hidden";
+                }
             }
-
         </script>
 
     </body>
