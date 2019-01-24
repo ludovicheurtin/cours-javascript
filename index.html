@@ -1,70 +1,14 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
-
-        <title>Document</title>
-
-        <style>
-
-            .anticlick {
-                z-index: 998;
-                position: absolute;
-                width:100%;
-                height: 100%;
-                top: 0;
-                left: 0;
-                background-color: black;
-                opacity: 0.3;
-                visibility: hidden;
-            }
-
-            .popin {
-                z-index: 999;
-                position: absolute;
-                width:30%;
-                height: 14vw;
-                top: 30%;
-                left: 35%;
-                border: 3px solid #ffdcc9;
-                font-family:"century gothic";
-                background-color: #ffeee4;
-                text-align: center;
-                border-radius: 10px;
-                box-shadow: 1.5px 1.5px 5px black;
-                visibility: hidden;
-            }
-
-            .TitreInContent {
-                margin-top: 2.5vw;
-                font-size: 2vw;
-
-            }
-
-            .button {
-                color: white;
-                border-radius: 10px;
-                background-color: #ff7d2f;
-                border-color: #ff7d2f;
-                font-family:"century gothic";
-            }
-
-            .buttonInContent {
-                margin-top: 2vw;
-                color: white;
-                border-radius: 10px;
-                background-color: #ff7d2f;
-                border-color: #ff7d2f;
-                font-family:"century gothic";
-            }
-
-        </style>
+        <link rel="stylesheet" href="style.css">
+        <title>Cours JS</title>
     </head>
 
     <body>
-
         <button id="btn" class="button">Bouton</button>
 
         <div id="anticlick" class="anticlick"></div>
@@ -80,29 +24,6 @@
 
             <button id="retour" class="buttonInContent"> Retour </button>
         </div>
-
-        <script>
-            document.getElementById('btn').addEventListener("click", toggle);
-            
-            document.getElementById('retour').addEventListener("click", toggle);
- 
-            function toggle(popin) {
-                node = document.getElementById("popin");
-                if (node.style.visibility=="visible") {
-                    node.style.visibility = "hidden";
-                } else {
-                    node.style.visibility = "visible";
-                }
-                
-                node = document.getElementById("anticlick");
-                if (node.style.visibility=="visible") {
-                    node.style.visibility = "hidden";
-                } else {
-                    node.style.visibility = "visible";
-                }
-            }
-
-        </script>
-
     </body>
+    <script src="script.js"></script>
 </html>
