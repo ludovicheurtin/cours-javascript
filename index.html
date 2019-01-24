@@ -25,12 +25,11 @@
                 z-index: 999;
                 position: absolute;
                 width:30%;
-                height: 18vw;
+                height: 14vw;
                 top: 30%;
                 left: 35%;
                 border: 3px solid #ffdcc9;
                 font-family:"century gothic";
-                font-size: 16px;
                 background-color: #ffeee4;
                 text-align: center;
                 border-radius: 10px;
@@ -38,12 +37,22 @@
                 visibility: hidden;
             }
 
-            .PopInContent {
-                margin-top: 6vw;
-                
+            .TitreInContent {
+                margin-top: 2.5vw;
+                font-size: 2vw;
+
             }
 
             .button {
+                color: white;
+                border-radius: 10px;
+                background-color: #ff7d2f;
+                border-color: #ff7d2f;
+                font-family:"century gothic";
+            }
+
+            .buttonInContent {
+                margin-top: 2vw;
                 color: white;
                 border-radius: 10px;
                 background-color: #ff7d2f;
@@ -57,12 +66,21 @@
     <body>
 
         <button id="btn" class="button">Bouton</button>
-        
+
         <div id="anticlick" class="anticlick"></div>
+        
         <div id="popin" class="popin">
-            <p class="PopInContent" >Contenu de la Pop In </p>
-            <button id="retour" class="button"> Retour </button>
+            <p class="TitreInContent" >Entrer votre adresse e-mail</p>
+
+            <form method="post">
+                <input type="text" name="mail" placeholder="Mail">
+            </form>
+
+            <button id="ok" class="buttonInContent"> Valider </button>
+
+            <button id="retour" class="buttonInContent"> Retour </button>
         </div>
+
         <script>
             document.getElementById('btn').addEventListener("click", toggle);
             
@@ -70,18 +88,20 @@
  
             function toggle(popin) {
                 node = document.getElementById("popin");
-                if (node.style.visibility=="hidden") {
-                    node.style.visibility = "visible";
-                } else {
+                if (node.style.visibility=="visible") {
                     node.style.visibility = "hidden";
+                } else {
+                    node.style.visibility = "visible";
                 }
+                
                 node = document.getElementById("anticlick");
-                if (node.style.visibility=="hidden") {
-                    node.style.visibility = "visible";
-                } else {
+                if (node.style.visibility=="visible") {
                     node.style.visibility = "hidden";
+                } else {
+                    node.style.visibility = "visible";
                 }
             }
+
         </script>
 
     </body>
