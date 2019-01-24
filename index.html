@@ -9,13 +9,14 @@
 
         <style>
             .popin {
-                width:250px;
-                height: "0";
-                padding:5px;
+                position: absolute;
+                width:100%;
+                height: 100%;
+                top: 0;
+                left: 0;
                 border: 3px solid #bbbbbb;
                 font-family:"century gothic";
                 font-size:16px;
-                visibility = "hidden";
             }
 
         </style>
@@ -23,25 +24,26 @@
 
     <body>
 
-        <button  onclick = "toggle('popin')">Bouton</button>
-        <div id="popin" class="popin">Ce contenu est visible ou non selon le cas</div>
-        <p>Je suis un texte sous la div</p>
+        <button id="btn">Bouton</button>
+        
+        <div id="popin" class="popin">
+            <p>Ce contenu est visible ou pas selon le cas</p>
+            <button id="retour"> Retour </button>
+        </div>
 
         <script>
-            node = document.getElementById('popin');
-            node.style.visibility = "hidden";
-            node.style.height = "0";
+            document.getElementById('btn').addEventListener("click", toggle);
 
-            function toggle(anId)
-            {
-                node = document.getElementById(anId);
-                if (node.style.visibility=="hidden")
-                {
+            node = document.getElementById('popin');
+
+            node.style.visibility = "hidden";
+ 
+            function toggle(popin) {
+                node = document.getElementById("popin");
+                if (node.style.visibility=="hidden") {
                     node.style.visibility = "visible";
-                    node.style.height = "auto";
-                }
-                else
-                {
+                    node.style.height = "100%";
+                } else {
                     node.style.visibility = "hidden";
                     node.style.height = "0";
                 }
