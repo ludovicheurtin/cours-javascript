@@ -17,6 +17,9 @@
                 border: 3px solid #bbbbbb;
                 font-family:"century gothic";
                 font-size:16px;
+                background-color: white;
+                padding-top: 250px;
+                text-align: center;
             }
 
         </style>
@@ -27,15 +30,14 @@
         <button id="btn">Bouton</button>
         
         <div id="popin" class="popin">
-            <p>Ce contenu est visible ou pas selon le cas</p>
+            <p>Contenu de la Pop In </p>
             <button id="retour"> Retour </button>
         </div>
 
         <script>
             document.getElementById('btn').addEventListener("click", toggle);
-
+            document.getElementById('retour').addEventListener("click", toggle);
             node = document.getElementById('popin');
-
             node.style.visibility = "hidden";
  
             function toggle(popin) {
@@ -48,6 +50,7 @@
                     node.style.height = "0";
                 }
             }
+
         </script>
 
     </body>
