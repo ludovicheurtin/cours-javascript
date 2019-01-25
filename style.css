@@ -14,7 +14,7 @@
     z-index: 999;
     position: absolute;
     width:30%;
-    height: 14vw;
+    height: 15vw;
     top: 30%;
     left: 35%;
     border: 3px solid #ffdcc9;
@@ -29,7 +29,14 @@
 .TitreInContent {
     margin-top: 2.5vw;
     font-size: 2vw;
+}
 
+.table {
+    margin-left: 7.5vw;
+}
+
+input{
+    font-size: 1.2vw;
 }
 
 .button {
@@ -47,4 +54,5 @@
     background-color: #ff7d2f;
     border-color: #ff7d2f;
     font-family:"century gothic";
+    font-size: 1.2vw;
 }

@@ -9,33 +9,32 @@
     </head>
 
     <body>
+
         <button id="btn" class="button">Bouton</button>
 
         <div id="anticlick" class="anticlick"></div>
         
         <div id="popin" class="popin">
             <p class="TitreInContent" >Entrer votre adresse e-mail</p>
-            
-            
-            
-                <table>
-                    <tr>
-                        <td colspan="2"><form onsubmit="return verifForm(this)"> 
-                                <input type="text" id="mail" name="email" placeholder="Mail" onblur="verifMail(this)">
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <button id="ok" class="buttonInContent" type="submit"> Valider </button></form>
-                        </td>
-                        <td>
-                            <button id="retour" class="buttonInContent"> Retour </button>
-                        </td>
-                    </tr>
-                </table>        
-            
-            
+
+            <table  class="table">
+                <tr>
+                    <td colspan="2">
+                        <form onsubmit="return verifForm(this)"> 
+                            <input type="text" id="mail" name="email" placeholder="Mail" onblur="verifMail(this)">
+                    </td>
+                </tr>
+                <tr>
+                    <td class="tableCaseBtn">
+                        <button id="ok" class="buttonInContent" type="submit"> Valider </button></form>
+                    </td>
+                    <td class="tableCaseBtn">
+                        <button id="retour" class="buttonInContent"> Retour </button>
+                    </td>
+                </tr>
+            </table>        
         </div>
+
     </body>
     <script src="script.js"></script>
 </html>
