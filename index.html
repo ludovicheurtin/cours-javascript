@@ -15,14 +15,26 @@
         
         <div id="popin" class="popin">
             <p class="TitreInContent" >Entrer votre adresse e-mail</p>
-
-            <form method="post">
-                <input type="text" name="mail" placeholder="Mail">
-            </form>
-
-            <button id="ok" class="buttonInContent"> Valider </button>
-
-            <button id="retour" class="buttonInContent"> Retour </button>
+            
+            
+            
+                <table>
+                    <tr>
+                        <td colspan="2"><form onsubmit="return verifForm(this)"> 
+                                <input type="text" id="mail" name="email" placeholder="Mail" onblur="verifMail(this)">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <button id="ok" class="buttonInContent" type="submit"> Valider </button></form>
+                        </td>
+                        <td>
+                            <button id="retour" class="buttonInContent"> Retour </button>
+                        </td>
+                    </tr>
+                </table>        
+            
+            
         </div>
     </body>
     <script src="script.js"></script>
