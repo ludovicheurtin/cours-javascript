@@ -21,12 +21,17 @@
                 <tr>
                     <td colspan="2">
                         <form onsubmit="return verifForm(this)"> 
-                            <input type="text" id="mail" name="email" placeholder="Mail" onblur="verifMail(this)">
+                            <input type="text" id="mail" name="email" placeholder="Mail" class="mail" onblur="verifMail(this)">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="password" id="psw" name="pasw" placeholder="password" class="psw">
                     </td>
                 </tr>
                 <tr>
                     <td class="tableCaseBtn">
-                        <button id="ok" class="buttonInContent" type="submit"> Valider </button></form>
+         <button id="ok" class="buttonInContent" type="submit"> Valider </button></form>
                     </td>
                     <td class="tableCaseBtn">
                         <button id="retour" class="buttonInContent"> Retour </button>

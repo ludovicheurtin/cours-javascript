@@ -48,7 +48,7 @@ function verifForm(f)
       return true;
    else
    {
-      alert("Veuillez remplir correctement tous les champs");
+      document.write("Veuillez remplir correctement tous les champs");
       return false;
    }
 }
