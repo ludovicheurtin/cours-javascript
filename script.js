@@ -44,8 +44,9 @@ function verifForm(f)
 {
    var mailOk = verifMail(f.email);
    
-   if(mailOk)
+   if(mailOk) {
       return true;
+   }
    else
    {
       document.write("Veuillez remplir correctement tous les champs");
